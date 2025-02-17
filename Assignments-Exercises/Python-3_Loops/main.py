@@ -1,15 +1,58 @@
 # Loops – For and While Assignment
 
-# Part 1: For Loop - Printing a list of favorite foods
-# Let's create a list of some favorite foods
-favorite_foods = ['Pizza', 'Burger', 'Ice Cream', 'Pasta', 'Sushi']
+# Part 1: 
+# - Write a Python program that demonstrates the use of both `for` and `while` loops.
+# - The program will have two main parts:
+#   1.  **Iterating Through a List Using a `for` Loop**:
+#       - Create a list of at least five of your favorite foods (e.g., `['pizza', 'sushi', 'pasta', 'tacos', 'ice cream']`).
+#       - Use a `for` loop to iterate through the list and print each food item on a new line.
+#   2.  **Countdown Using a `while` Loop**:
+#       - Ask the user for a starting number (e.g., `10`).
+#       - Use a `while` loop to count down from the starting number to `1`, printing each number.
+#       - After reaching `1`, print `"Countdown complete!"`.
 
-# Using a for loop to print each food in the list
-print("Here are my favorite foods:")
-for food in favorite_foods:
-    print(f"- {food}")  # Print each food item with a bullet point
+# No. 1
+# created a list of my favorite foods 
+fav_foods = ['ice cream', 'chocolate', 'boiled egg', 'sushi', 'cake', 'fried chicken']
 
-print("\n")  # Add a blank line to separate the outputs of the two parts
+# made a print statement here to make it more organized and aesthetic
+print("My Favorite Foods: ")
+# enumerated the listed foods in the assigned variable fav_foods then iterated them using for loop
+for idx, foods in enumerate(fav_foods):
+    print(f'    {idx+1}. {foods}')
+
+# No. 2
+try:
+    # ask user for a reference number 
+    countdown_input = int(input("\nPlease enter your desired starting number for countdown: "))
+    # raise an error if the entered input is non-numerical value
+
+    # checks if the input is negative number
+    if countdown_input <= 0:
+        print("Invalid input: Please enter a positive number only or a number greater than 0.")
+    
+    # will approve every response if it is a positive number to initiate while loop
+    elif countdown_input > 0:
+        while countdown_input != 0:
+            print(countdown_input)
+            countdown_input -= 1
+        print("Countdown complete!")
+
+except ValueError:
+    print(f"Invalid input: Please enter a valid number.")
+
+
+# Sample Code
+# # Part 1: For Loop - Printing a list of favorite foods
+# # Let's create a list of some favorite foods
+# favorite_foods = ['Pizza', 'Burger', 'Ice Cream', 'Pasta', 'Sushi']
+
+# # Using a for loop to print each food in the list
+# print("Here are my favorite foods:")
+# for food in favorite_foods:
+#     print(f"- {food}")  # Print each food item with a bullet point
+
+# print("\n")  # Add a blank line to separate the outputs of the two parts
 
 # Part 2: While Loop - Countdown from a number
 # Ask the user to enter a starting number for the countdown
