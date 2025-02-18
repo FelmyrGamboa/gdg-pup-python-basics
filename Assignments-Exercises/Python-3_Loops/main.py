@@ -42,6 +42,50 @@ except ValueError:
     print(f"Invalid input: Please enter a valid number.")
 
 
+# Part 2:
+# - **For Loop Section**:
+#   - Create a list of your favorite items (foods, movies, colors, etc.).
+#   - Use a `for` loop to iterate through the list and print each item.
+# - **While Loop Section**:
+#   - Prompt the user to enter a positive integer as the starting number.
+#   - Validate the input:
+#     - If the input is not a valid positive integer, display: `"Invalid input: Please enter a number greater than zero."`
+#     - If the input is valid, start the countdown.
+#   - Use a `while` loop to count down from the starting number to `1`.
+#   - Once the countdown reaches `1`, print `"Countdown complete!"`.
+
+# created a list of my favorite items
+fav_items = ['badminton', 'guitar', 'earphones', 'perfume', 'shirebound and busking', 'music']
+
+# made a print statement to contain the iteration of my favorite things aesthetically
+print("\nMy Favorite items: ")
+
+# added a built-in function enumerate to iterate the list with numbers to make it better visually.
+for idx, items in enumerate(fav_items):
+    print(f"    {idx+1}. {items}")
+
+# try syntax to detect all possible errors that may rise
+try:
+    # created a user input for starting number
+    start_num = int(input("\nPlease enter a positive number as starting number: "))
+
+    # checks if the the input is a positive number
+    if start_num < 0:
+        print("Invalid input: Please enter a number greater than zero.")
+    
+    # initiates the while loop if the input has been verified
+    else:
+        while start_num > 0:
+            print(start_num)
+            start_num -= 1
+        
+        # print statement after the while loop is finished
+        print("Countdown complete!")
+
+# except syntax that will catch potential error in the user input
+except ValueError:
+    print("Invalid input: Please enter a positive integer.")
+
 # Sample Code
 # # Part 1: For Loop - Printing a list of favorite foods
 # # Let's create a list of some favorite foods
@@ -56,21 +100,21 @@ except ValueError:
 
 # Part 2: While Loop - Countdown from a number
 # Ask the user to enter a starting number for the countdown
-try:
-    starting_number = int(input("Enter a positive number to start the countdown: "))
+# try:
+#     starting_number = int(input("Enter a positive number to start the countdown: "))
 
-    # Check if the number is positive
-    if starting_number <= 0:
-        print("Invalid input: Please enter a number greater than zero.")
-    else:
-        print("Countdown:")
-        # Use a while loop to count down from the starting number to 1
-        while starting_number > 0:
-            print(starting_number)  # Print the current number
-            starting_number -= 1   # Reduce the number by 1 for the next step
+#     # Check if the number is positive
+#     if starting_number <= 0:
+#         print("Invalid input: Please enter a number greater than zero.")
+#     else:
+#         print("Countdown:")
+#         # Use a while loop to count down from the starting number to 1
+#         while starting_number > 0:
+#             print(starting_number)  # Print the current number
+#             starting_number -= 1   # Reduce the number by 1 for the next step
 
-        print("Countdown complete!")  # Message when the countdown ends
+#         print("Countdown complete!")  # Message when the countdown ends
 
-# Handle invalid inputs (e.g., if the user enters a non-number)
-except ValueError:
-    print("Invalid input: Please enter a valid number.")
+# # Handle invalid inputs (e.g., if the user enters a non-number)
+# except ValueError:
+#     print("Invalid input: Please enter a valid number.")
